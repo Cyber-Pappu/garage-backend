@@ -5,7 +5,7 @@ const {
     getInventory,
     restockItem,
     consumeStock
-} = require('../Controllers/inventoryController');
+} = require('../Controllers/inventorycontroller');
 
 router.get('/', getInventory);
 

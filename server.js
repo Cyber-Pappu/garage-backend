@@ -1,11 +1,13 @@
+require('dotenv').config();
+
 const express = require('express');
 const cors = require('cors');
 
 require('./config/db');
 
-const inventoryRoutes = require('./routes/inventoryRoutes');
+const inventoryRoutes = require('./routes/inventoryroutes');
 
-const invoiceRoutes = require('./routes/invoiceRouter');
+const invoiceRoutes = require('./routes/invoicerouter');
 
 const app = express();
 
@@ -23,5 +25,5 @@ app.get('/', (req, res) => {
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
-    console.log('Server running on port ${PORT}');
+    console.log(`Server running on port ${PORT}`);
 });

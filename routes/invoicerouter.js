@@ -5,7 +5,7 @@ const {
     getInvoices,
     saveInvoice,
     getInvoiceItems
-} = require('../Controllers/invoiceController');
+} = require('../controllers/invoicecontroller');
 
 router.get('/', getInvoices);
 
