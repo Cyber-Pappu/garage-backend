@@ -103,6 +103,8 @@ const restockItem = (req, res) => {
 };
 const consumeStock = (req, res) => {
 
+    console.log('Consume Request:', req.body);
+
     const { part_name, quantity } = req.body;
 
     db.query(
