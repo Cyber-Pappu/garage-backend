@@ -12,13 +12,14 @@ const connection = mysql.createPool({
     queueLimit: 0
 });
 
-connection.connect((err) => {
-    if (err) {
-        console.error('Database Connection Failed', err);
-        return;
-    }
+connection.getConnection((err, conn) => {
+  if (err) {
+    console.error('Database Connection Failed:', err);
+    return;
+  }
 
-    console.log('MySQL Connected Successfully');
+  console.log('MySQL Connected Successfully');
+  conn.release();
 });
 
 module.exports = connection;
